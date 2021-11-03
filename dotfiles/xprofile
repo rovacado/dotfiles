@@ -1,0 +1,4 @@
+xrandr -s 2560x1080_60.00
+setxkbmap us
+nitrogen --restore
+picom -f &

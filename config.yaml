@@ -3,4 +3,44 @@ config:
   create: true
   dotpath: dotfiles
 dotfiles:
+  f_xprofile:
+    src: xprofile
+    dst: ~/.xprofile
+  f_gitconfig:
+    src: gitconfig
+    dst: ~/.gitconfig
+  d_alacritty:
+    src: config/alacritty
+    dst: ~/.config/alacritty
+  f_config.py:
+    src: config/qtile/config.py
+    dst: ~/.config/qtile/config.py
+  f_picom.conf:
+    src: config/picom.conf
+    dst: ~/.config/picom.conf
+  f_config.fish:
+    src: config/fish/config.fish
+    dst: ~/.config/fish/config.fish
+  f_abbr.fish:
+    src: config/fish/abbr.fish
+    dst: ~/.config/fish/abbr.fish
+    link: link
+    chmod: '755'
+  f_alacritty.yml:
+    src: config/alacritty/alacritty.yml
+    dst: ~/.config/alacritty/alacritty.yml
+  f_dracula.yml:
+    src: config/alacritty/themes/dracula.yml
+    dst: ~/.config/alacritty/themes/dracula.yml
 profiles:
+  home:
+    dotfiles:
+    - f_xprofile
+    - f_gitconfig
+    - d_alacritty
+    - f_config.py
+    - f_picom.conf
+    - f_config.fish
+    - f_abbr.fish
+    - f_alacritty.yml
+    - f_dracula.yml
