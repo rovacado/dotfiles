@@ -21,11 +21,6 @@ dotfiles:
   f_config.fish:
     src: config/fish/config.fish
     dst: ~/.config/fish/config.fish
-  f_abbr.fish:
-    src: config/fish/abbr.fish
-    dst: ~/.config/fish/abbr.fish
-    link: link
-    chmod: '755'
   f_alacritty.yml:
     src: config/alacritty/alacritty.yml
     dst: ~/.config/alacritty/alacritty.yml
@@ -41,6 +36,5 @@ profiles:
     - f_config.py
     - f_picom.conf
     - f_config.fish
-    - f_abbr.fish
     - f_alacritty.yml
     - f_dracula.yml

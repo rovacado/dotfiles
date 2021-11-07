@@ -1,4 +1,4 @@
 if status is-interactive
-	~/.configh/fish/abbr.fish
+	starship init fish | source
 end
-starship init fish | source
+
