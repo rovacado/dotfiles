@@ -27,6 +27,9 @@ dotfiles:
   f_dracula.yml:
     src: config/alacritty/themes/dracula.yml
     dst: ~/.config/alacritty/themes/dracula.yml
+  d_functions:
+    src: config/fish/functions
+    dst: ~/.config/fish/functions
 profiles:
   home:
     dotfiles:
@@ -38,3 +41,4 @@ profiles:
     - f_config.fish
     - f_alacritty.yml
     - f_dracula.yml
+    - d_functions

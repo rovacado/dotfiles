@@ -1,3 +1,5 @@
 [user]
 	name = rovacado
 	email = 23286860+rovacado@users.noreply.github.com
+[init]
+	defaultBranch = main
