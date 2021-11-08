@@ -88,7 +88,7 @@ keys = [
         desc="Spawn a command using a prompt widget"),
     
     # Spawn often used programs
-    Key([mod], "b", lazy.spawn("brave")),
+    Key([mod], "b", lazy.spawn("librewolf")),
 ]
 
 groups = [Group(i) for i in "123456789"]
@@ -133,25 +133,29 @@ extension_defaults = widget_defaults.copy()
 
 screens = [
     Screen(
-        bottom=bar.Bar(
+        top=bar.Bar(
             [
-                widget.CurrentLayout(),
-                widget.GroupBox(),
-                widget.Prompt(),
-                widget.WindowName(),
+                widget.CurrentLayout(font="Hack Nerd Font"),
+                widget.GroupBox(
+                    highlight_color="#44475a",
+                    font="Hack Nerd Font",
+                    highlight_method="line"
+                ),
+                widget.Prompt(font="Hack Nerd Font"),
+                widget.WindowName(font="Hack Nerd Font"),
                 widget.Chord(
+                    font="Hack Nerd Font",
                     chords_colors={
                         'launch': ("#ff0000", "#ffffff"),
                     },
                     name_transform=lambda name: name.upper(),
                 ),
-                widget.TextBox("default config", name="default"),
-                widget.TextBox("Press &lt;M-r&gt; to spawn", foreground="#d75f5f"),
                 widget.Systray(),
                 widget.Clock(format='%Y-%m-%d %a %I:%M %p'),
                 widget.QuickExit(),
             ],
-            24,
+            20,
+            background="#282a36",
         ),
     ),
 ]
