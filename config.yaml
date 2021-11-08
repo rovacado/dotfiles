@@ -30,6 +30,9 @@ dotfiles:
   d_functions:
     src: config/fish/functions
     dst: ~/.config/fish/functions
+  d_gtk-3.0:
+    src: config/gtk-3.0
+    dst: ~/.config/gtk-3.0
 profiles:
   home:
     dotfiles:
@@ -42,3 +45,4 @@ profiles:
     - f_alacritty.yml
     - f_dracula.yml
     - d_functions
+    - d_gtk-3.0
